@@ -1,0 +1,89 @@
+.container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+.containerImage{
+    display:flex;
+}
+.containerImage img{
+    display: flex;
+    max-width: 300px;
+    height: auto;
+}
+.containerButtons{
+    display: flex;
+    align-items: center;
+    justify-content:unset;
+    width: 50%;
+    margin-left: 20%;
+}
+.containerButtons :link {
+    padding-right:30px;
+    padding-left: 30px;
+    font-weight: 700;
+    border:none;
+}
+.button {
+    position: relative;
+    height: 40px;
+    padding: 0 20px;
+    border: 2px solid #000;
+    background: #f0f0f0;
+    user-select: none;
+    white-space: nowrap;
+    transition: all .05s linear;
+    font-family: inherit;
+   }
+   
+   .button:before, .button:after {
+    content: "";
+    position: absolute;
+    background: #f0f0f0;
+    transition: all .2s linear;
+   }
+   
+   .button:before {
+    width: calc(100% + 6px);
+    height: calc(100% - 16px);
+    top: 8px;
+    left: -3px;
+   }
+   
+   .button:after {
+    width: calc(100% - 16px);
+    height: calc(100% + 6px);
+    top: -3px;
+    left: 8px;
+   }
+   
+   .button:hover {
+    cursor: crosshair;
+   }
+   
+   .button:active {
+    transform: scale(0.95);
+   }
+   
+   .button:hover:before {
+    height: calc(100% - 32px);
+    top: 16px;
+   }
+   
+   .button:hover:after {
+    width: calc(100% - 32px);
+    left: 16px;
+   }
+   
+   .button span {
+    font-size: 15px;
+    z-index: 3;
+    position: relative;
+    font-weight: 700;
+    color:rgb(54, 54, 54)
+   }
+
+   

@@ -1,6 +1,9 @@
 .App {
-  text-align: center;
+    min-height: 100vh;
+          background: url(./assets/v748-toon-69.jpg) no-repeat center center fixed;
+          background-size: cover;
 }
+
 
 .App-logo {
   height: 40vmin;
