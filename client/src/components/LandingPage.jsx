@@ -14,7 +14,7 @@ export default function LandingPage(){
                 <Link to='/videogame'><span>CREATE</span></Link>
             </div>
             <div className={styles.description}>
-                <h1>FIND THE PERFECT GAME</h1>
+                <h1>FIND YOUR PERFECT GAME</h1>
                 <p>Search for a video game by its name. Create your video game.<br/>
                     Filter them according to their genre, their origin 'rawg api' or 'created'.<br/>
                     Sort them alphabetically by name or rating and access their details.</p>

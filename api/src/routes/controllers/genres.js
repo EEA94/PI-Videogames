@@ -11,5 +11,16 @@ const allGenres = async (req,res, next)=>{
     }
 }
 
+const createGenre = async (req,res)=>{
+    const {genre} = req.body
+    const genero = await Genre.findOrCreate({
+        where: {
+            name: genre,
+        }
+    })
+    res.status(200).send(genero)
+
+}
+
 module.exports = allGenres;
 

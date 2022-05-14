@@ -90,7 +90,7 @@ export default function rootReducer(state=initialState, action){
 
         case 'FILTER_BY_GENRES':
             console.log(state.copyVideogames)
-            const filterByGenres = state.copyVideogames.filter((v)=>v.genres?.toLowerCase().includes(action.payload.toLowerCase()))
+            const filterByGenres = state.videogames.filter((v)=>v.genres?.toLowerCase().includes(action.payload.toLowerCase()))
             
             return{
                 ...state,

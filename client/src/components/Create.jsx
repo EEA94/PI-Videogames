@@ -194,7 +194,7 @@ export default function Create() {
             <select id="selectGenres" className={styles.select} onChange={(e)=>handleSelectGenres(e)}>
                     {!input.genres.length ?
                     <option key='select' value="default">Select genres</option> :
-                    <option key='select' disabled={true}>Select genres</option>
+                    <option key='select' disabled selected>Select genres</option>
                     }
                 {
                     allGenres?.map((g)=>{
@@ -219,7 +219,7 @@ export default function Create() {
             <select id="selectPlatforms" className={styles.select} onChange={(e)=>handleSelectPlatforms(e)}>
                     {!input.platforms.length ?
                     <option key='select' value="default">Select platforms</option> :
-                    <option key='select' disabled={true}>Select platforms</option>
+                    <option key='select' disabled selected>Select platforms</option>
                     }
                 {
                     platforms?.map((p,i)=>{
