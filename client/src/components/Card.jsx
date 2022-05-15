@@ -11,9 +11,9 @@ export default function Card({name,image,genres,rating,id}){
                 </Link>
             </div>
             <div className={styles.info}>
-                <b className={styles.name}>{name}</b><br/>
-                <b className={styles.titles}>Rating: </b><span>{rating}</span><br/>
-                <b className={styles.titles}>Genres: </b><span>{genres}.</span>
+                <b>{name}</b><br/>
+                <b>Rating: </b><span>{rating}</span><br/>
+                <b>Genres: </b><span>{genres}.</span>
             </div>
         </div>
     )
