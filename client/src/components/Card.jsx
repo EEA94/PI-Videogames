@@ -12,8 +12,8 @@ export default function Card({name,image,genres,rating,id}){
             </div>
             <div className={styles.info}>
                 <b>{name}</b><br/>
-                <b>Rating: <span>{rating}</span></b><br/>
-                <b>Genres: <span>{genres}.</span></b>
+                <b>Rating: {rating}</b><br/>
+                <b>Genres: {genres}.</b>
             </div>
         </div>
     )
