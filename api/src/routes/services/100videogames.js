@@ -1,5 +1,4 @@
-// require('dotenv').config();
-// const {API_KEY} = process.env;
+const API_KEY = 'a35a052cff734b16bc38244eaadec0c9';
 const axios = require('axios');
 const {Videogame, Genre} = require("../../db");
  
@@ -7,7 +6,7 @@ const getApiInfo = async()=>{
     let gamesData = [];
 
     for (let i = 1; i < 6; i++) {
-        gamesData.push(axios.get(`https://api.rawg.io/api/games?key=a35a052cff734b16bc38244eaadec0c9&page=${i}`));
+        gamesData.push(axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=${i}`));
     }
 
     return Promise.all(gamesData)

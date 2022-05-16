@@ -1,11 +1,10 @@
 const axios = require("axios");
-// const {API_KEY} = process.env;
-// require('dotenv').config();
+const API_KEY = 'a35a052cff734b16bc38244eaadec0c9';
 const {Op} = require('sequelize')
 const {Videogame, Genre} = require("../../db");
 
 const getSearchNameApi = async (name)=>{
-    let videogames = await axios.get(`https://api.rawg.io/api/games?key=a35a052cff734b16bc38244eaadec0c9&search=${name}`)
+    let videogames = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&search=${name}`)
     const sliced = videogames.data.results.slice(0, 15);
     
     return sliced.map(v=>{

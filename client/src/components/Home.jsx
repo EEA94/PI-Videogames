@@ -76,7 +76,7 @@ export default function Home() {
         paginado={paginado}/> 
       </div>
       
-      <div className={styles.cards}>
+      <div>
       {
               currentCards.length > 0 ?
               <div className={styles.container}>
