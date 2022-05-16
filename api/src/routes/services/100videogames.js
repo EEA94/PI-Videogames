@@ -80,7 +80,7 @@ const getDbInfo = async function() {
 const getAllVideogames = async()=>{
     const dbData = await getDbInfo();
     const apiData = await getApiInfo();
-    const allvgames = [...dbData, ...apiData]
+    const allvgames = [...dbData, ...apiData].slice(0,100)
     return allvgames;
 }
 
