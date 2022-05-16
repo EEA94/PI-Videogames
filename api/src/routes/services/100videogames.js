@@ -71,7 +71,6 @@ const getDbInfo = async function() {
           platforms,
           createdInDb,
         };
-        
         return vGameFormat;
       });
       return dbFormat;
