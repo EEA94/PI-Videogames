@@ -84,7 +84,7 @@ export default function Home() {
                 videogameNotFound() :
                  currentCards.map(vg => {
                   return ( 
-                  <div className={styles.card} key={vg.id}>
+                  <div key={vg.id}>
                     <Card
                       image={vg.image}
                       name={vg.name}
