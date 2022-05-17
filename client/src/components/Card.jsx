@@ -21,7 +21,7 @@ import styles from '../styles/Card.module.css'
 export default function Card({name,image,genres,rating,id}){
 
 function colorRating(rtg){
-    if(rtg>0 && rtg<=2) return styles.red
+    if(rtg>=0 && rtg<=2) return styles.red
     else if(rtg>2 && rtg<=3) return styles.orange
     else if(rtg>3 && rtg<=3.9) return styles.yellow
     else return styles.green
