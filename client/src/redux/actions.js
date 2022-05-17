@@ -9,7 +9,7 @@ export function getVideogames(){
 
 export function getGenres(){
     return function(dispatch){
-        axios.get('/genres')
+        axios.get('https://demovideogames-deploy.herokuapp.com/genres')
         .then(response=>
             dispatch({type:'GET_GENRES', payload:response.data})
             )

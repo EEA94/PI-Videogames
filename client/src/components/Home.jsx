@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-    {console.log(allVideogames)}
+    
       <Nav/>
       <div className={styles.orderFilter}>
         <Filters handleFilterCreatedAndRAWG={handleFilterCreatedAndRAWG} handleFilterByGenres={handleFilterByGenres} />

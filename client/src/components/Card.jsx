@@ -19,6 +19,14 @@ import styles from '../styles/Card.module.css'
 //     )
 // }
 export default function Card({name,image,genres,rating,id}){
+
+function colorRating(rtg){
+    if(rtg>0 && rtg<=2) return styles.red
+    else if(rtg>2 && rtg<=3) return styles.orange
+    else if(rtg>3 && rtg<=3.9) return styles.yellow
+    else return styles.green
+}
+
     return(
         <div className={styles.card}>
             <div className={styles.facefront}>
@@ -27,10 +35,10 @@ export default function Card({name,image,genres,rating,id}){
             </div>
             <div className={styles.faceback}>
                 <h3>{name}</h3>
-                <p>Rating: {rating}</p>
-                <p>Genres: {genres}</p>
+                <p className={colorRating(rating)}>{rating}</p>
+                <p>{genres}</p>
                 <div className={styles.link}>
-                <Link to={`/videogame/${id}`}><button className={styles.button}>Details</button></Link>
+                <Link to={`/videogame/${id}`}><button className={styles.button}>More details</button></Link>
                 </div>
                 
             </div>
