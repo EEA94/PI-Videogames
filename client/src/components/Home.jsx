@@ -9,7 +9,6 @@ import Filters from "./Filters";
 import styles from '../styles/Home.module.css'
 
 
-
 export default function Home() {
   const dispatch = useDispatch();
   const allVideogames = useSelector(state => state.videogames);
@@ -21,7 +20,7 @@ export default function Home() {
   const currentCards = allVideogames?.slice(indexFirstCard, indexLastCard)
 
   const [,setOrder] = useState();
-  
+
 
   const paginado = (current) => {
     setCurrentPage(current);
