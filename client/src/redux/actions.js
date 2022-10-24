@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function getVideogames(){
     return async function(dispatch){
-        const videogames = await axios.get('https://demovideogames-deploy.herokuapp.com/videogames')
+        const videogames = await axios.get(`${axios.defaults.baseURL}/videogames`)
         return dispatch({type:'GET_VIDEOGAMES', payload: videogames.data})
 }
 }
@@ -18,21 +18,21 @@ export function getGenres(){
 
 export function getVideogamesByName(name){
     return async function(dispatch){
-        const names = await axios.get('https://demovideogames-deploy.herokuapp.com/videogames?name='+name)
+        const names = await axios.get(`${axios.defaults.baseURL}/videogames?name=${name}`)
         return dispatch({type:'GET_BY_NAME', payload:names.data})
     }
 }
 
 export function getVideogameById(id){
     return async function(dispatch){
-        const findId = await axios.get('https://demovideogames-deploy.herokuapp.com/videogame/'+id)
+        const findId = await axios.get(`${axios.defaults.baseURL}/videogame/${id}`)
         return dispatch({type:'GET_BY_ID', payload:findId.data})
     }
 }
 
 export function postVideogame(post){
     return async function(dispatch){
-        const data = await axios.post("https://demovideogames-deploy.herokuapp.com/videogame", post)
+        const data = await axios.post(`${axios.defaults.baseURL}/videogame`, post)
         return data;
     }
 }
